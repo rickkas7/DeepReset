@@ -167,7 +167,7 @@ So:
 
 [This page](https://www.electronics-tutorials.ws/waveforms/555_timer.html) has a great introduction to the various modes of the 555 timer.
 
-By the way, this particular circuit uses the ST Microelectronics TS555. The classic bipolar 555 timer requires a minimum of 5V and 20 mA to do its thing. The TS555 works from 2V to 16V at around 100 µA, making it much better suited for battery-powered applications.
+By the way, this particular circuit uses the ST Microelectronics TS555. The classic bipolar 555 timer requires a minimum of 4.5V and 20 mA to do its thing. The TS555 works from 2V to 16V at around 100 µA, making it much better suited for battery-powered applications.
 
 ![Output Circuit](images/output.png)
 
