@@ -27,7 +27,7 @@ Board layout:
 
 ![Board](images/board.png)
 
-By default D2 is the deep sleep pin, but you can change that using the configuration jumper pads on the bottom of the board.
+By default D2 is the deep reset pin, but you can change that using the configuration jumper pads on the bottom of the board.
 
 If you set D2 to OUTPUT and make it go HIGH, the device will immediately power down for around 30 seconds, then essentially cold boot. The MCU and modem will be de-powered during this time using the EN pin.
 
@@ -135,7 +135,7 @@ One pin is used to enter deep reset by setting the pin as OUTPUT and setting it 
 
 ![Power-on-reset](images/por.png)
 
-The state of the timer at power-up cannot be guaranteed. To make sure that the device immediately starts when powered on, a Richtech RT9818 power detector is connected to the RESET pin on the TS555 timer. There's a 100K weak pull-up on the pin as the RT9818 is an open-collector active-low output. The RT9818 is $0.41 in single quantities. 
+The state of the timer at power-up cannot be guaranteed. To make sure that the device immediately starts when powered on, a Richtek RT9818 power detector is connected to the RESET pin on the TS555 timer. There's a 100K weak pull-up on the pin as the RT9818 is an open-collector active-low output. The RT9818 is $0.41 in single quantities. 
 
 You can omit it, however sometimes the device will then go into deep reset at power-up. It will recover after 30 seconds, but it's disconcerting when it happens so I like to include the RT9818.
 
