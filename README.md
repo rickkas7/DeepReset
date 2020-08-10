@@ -175,4 +175,8 @@ Finally, the output circuit uses a 2N7002 N-channel MOSFET. The timer output is 
 
 Also, the TS555 timer can be running at 4.9V when powered by USB. We don't want to drive the EN line with that high of a voltage, so using the N-channel MOSFET in open-collector style is preferable.
 
+## Warning
+
+Make sure you don't have any GPIO connected to voltages other than 3V3, such as a with a pull-up to a different supply, or a circuit that could back-feed the GPIO. If you have power leaking into GPIO when the EN pin is held low, it's possible that this leakage current will keep the nRF52 powered up, and it won't reset by pulling the EN line low.
+
 
